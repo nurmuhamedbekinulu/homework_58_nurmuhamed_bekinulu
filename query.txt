@@ -1,0 +1,63 @@
+_____________________________________/2.1 task/___________________
+
+from django.utils import timezone
+from datetime import timedelta
+from webapp.models import *
+from django.db.models import Q
+
+current_date = timezone.now()
+one_month_ago = current_date - timedelta(days=30)
+done_at_last_month_tasks = Task.objects.filter(Q(updated_at__gte=one_month_ago, updated_at__lte=current_date),Q(status__name='Done'))
+
+__________________________________________________________________
+
+
+_____________________________________/2.2 task/___________________
+
+from webapp.models import *
+from django.db.models import Q
+
+tasks = Task.objects.filter(Q(Q(task_types__name='Task')|Q(task_types__name='Enhancement')),Q(Q(status__name='Done')|Q(status__name='In Progress')))
+
+__________________________________________________________________
+
+
+_____________________________________/2.3 task/___________________
+
+from webapp.models import *
+from django.db.models import Q
+
+tasks = Task.objects.filter(Q(Q(task_types__name='Bug') & ~Q(status__name='Done'))|Q(title__icontains='bug'))
+
+__________________________________________________________________
+
+BONUS
+_____________________________________/2.4 task/___________________
+
+from webapp.models import *
+
+tasks = Task.objects.values('id', 'title', 'status__name', 'task_types__name')
+
+__________________________________________________________________
+
+_____________________________________/2.5 task/___________________
+
+from webapp.models import *
+
+tasks = Task.objects.filter('title'=='description')
+
+__________________________________________________________________
+
+
+_____________________________________/2.6 task/___________________
+
+from webapp.models import *
+from django.db.models import F
+
+Task.objects.filter(title=F('description'))
+
+__________________________________________________________________
+
+
+
+
