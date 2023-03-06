@@ -656,8 +656,8 @@
         "model": "webapp.task",
         "pk": 5,
         "fields": {
-            "title": "tttttttttt",
-            "description": "ttttttttttt",
+            "title": "Прочитать книгу",
+            "description": "Прочитать книгу",
             "is_deleted": true,
             "completion_date": "2022-01-02",
             "deleted_at": "2023-03-03",
@@ -671,8 +671,8 @@
         "model": "webapp.task",
         "pk": 6,
         "fields": {
-            "title": "sdsdsd",
-            "description": "sdsds",
+            "title": "Купить лан провод",
+            "description": "Купить лан провод",
             "is_deleted": true,
             "completion_date": "2022-01-02",
             "deleted_at": "2023-03-03",
@@ -740,6 +740,234 @@
             ],
             "task_types": [
                 1
+            ]
+        }
+    },
+    {
+        "model": "webapp.task",
+        "pk": 10,
+        "fields": {
+            "title": "Создать файл фикстур",
+            "description": "Создать файл фикстур из 15-20 записей для проекта To-Do List",
+            "is_deleted": false,
+            "completion_date": "2023-07-03",
+            "deleted_at": null,
+            "created_at": "2023-03-06T16:10:38.619Z",
+            "updated_at": "2023-03-06T16:13:49.742Z",
+            "status": [
+                3
+            ],
+            "task_types": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "webapp.task",
+        "pk": 11,
+        "fields": {
+            "title": "Освежить знания о декораторах",
+            "description": "Повторить информацию о декораторах в python",
+            "is_deleted": false,
+            "completion_date": null,
+            "deleted_at": null,
+            "created_at": "2023-03-06T16:12:47.175Z",
+            "updated_at": "2023-03-06T16:12:47.175Z",
+            "status": [
+                3
+            ],
+            "task_types": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "webapp.task",
+        "pk": 12,
+        "fields": {
+            "title": "Игра \"крестики нолики\"",
+            "description": "Написать игру \"крестики нолики\" на языке питон",
+            "is_deleted": false,
+            "completion_date": "2023-04-02",
+            "deleted_at": null,
+            "created_at": "2023-03-06T16:17:11.221Z",
+            "updated_at": "2023-03-06T16:17:11.221Z",
+            "status": [
+                1
+            ],
+            "task_types": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "webapp.task",
+        "pk": 13,
+        "fields": {
+            "title": "Написать игру \"Виселица\"",
+            "description": "Написать игру \"Виселица\" на языке питон",
+            "is_deleted": false,
+            "completion_date": null,
+            "deleted_at": null,
+            "created_at": "2023-03-06T16:18:25.978Z",
+            "updated_at": "2023-03-06T16:18:25.978Z",
+            "status": [
+                1
+            ],
+            "task_types": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "webapp.task",
+        "pk": 14,
+        "fields": {
+            "title": "Дописать функционал для игры \"крестики нолики\"",
+            "description": "Дописать функционал для игры \"крестики нолики\" чтобы данные вводились из файла json",
+            "is_deleted": false,
+            "completion_date": null,
+            "deleted_at": null,
+            "created_at": "2023-03-06T16:20:51.099Z",
+            "updated_at": "2023-03-06T16:20:51.099Z",
+            "status": [
+                2
+            ],
+            "task_types": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "webapp.task",
+        "pk": 15,
+        "fields": {
+            "title": "Дописать функционал для игры \"Виселица\"",
+            "description": "Дописать функционал для игры \"Виселица\"  чтобы данные вводились из файла json",
+            "is_deleted": false,
+            "completion_date": null,
+            "deleted_at": null,
+            "created_at": "2023-03-06T16:20:53.267Z",
+            "updated_at": "2023-03-06T16:20:53.268Z",
+            "status": [
+                2
+            ],
+            "task_types": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "webapp.task",
+        "pk": 16,
+        "fields": {
+            "title": "Исправить ошибки при вводе пользователем в игре \"виселица\"",
+            "description": "Исправить ошибки при вводе пользователем в игре \"виселица\", добавить проверки чтобы пользователь мог вводить только валидные данные",
+            "is_deleted": false,
+            "completion_date": null,
+            "deleted_at": null,
+            "created_at": "2023-03-06T16:24:32.231Z",
+            "updated_at": "2023-03-06T16:24:32.231Z",
+            "status": [
+                2
+            ],
+            "task_types": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "webapp.task",
+        "pk": 17,
+        "fields": {
+            "title": "Исправить ошибки при вводе пользователем в игре \"крестики нолики\"",
+            "description": "Исправить ошибки при вводе пользователем в игре \"крестики нолики\",  добавить проверки чтобы пользователь мог вводить только валидные данные",
+            "is_deleted": false,
+            "completion_date": null,
+            "deleted_at": null,
+            "created_at": "2023-03-06T16:24:34.399Z",
+            "updated_at": "2023-03-06T16:24:34.399Z",
+            "status": [
+                2
+            ],
+            "task_types": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "webapp.task",
+        "pk": 18,
+        "fields": {
+            "title": "Создать веб приложение для парсинга данных",
+            "description": "Создать веб приложение для парсинга данных с данными о продуктов с популярных маркетплейсов",
+            "is_deleted": false,
+            "completion_date": "2023-04-02",
+            "deleted_at": null,
+            "created_at": "2023-03-06T16:26:24.782Z",
+            "updated_at": "2023-03-06T16:26:24.782Z",
+            "status": [
+                1
+            ],
+            "task_types": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "webapp.task",
+        "pk": 19,
+        "fields": {
+            "title": "Разработка шаблона под приложение парсер",
+            "description": "Разработка шаблона под приложение парсер с внешним видом как у amazon.com",
+            "is_deleted": false,
+            "completion_date": null,
+            "deleted_at": null,
+            "created_at": "2023-03-06T16:28:43.521Z",
+            "updated_at": "2023-03-06T16:28:43.521Z",
+            "status": [
+                2
+            ],
+            "task_types": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "webapp.task",
+        "pk": 20,
+        "fields": {
+            "title": "Решить проблему с загрузкой медиа данных для приложения парсер",
+            "description": "Решить проблему с загрузкой медиа данных для приложения парсер и найти способ сжатия данных с минимальной потерей качества",
+            "is_deleted": false,
+            "completion_date": null,
+            "deleted_at": null,
+            "created_at": "2023-03-06T16:33:37.384Z",
+            "updated_at": "2023-03-06T16:33:37.384Z",
+            "status": [
+                1
+            ],
+            "task_types": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "webapp.task",
+        "pk": 21,
+        "fields": {
+            "title": "Добавление CEO оптимизации в приложение парсер",
+            "description": "Добавление CEO оптимизации в приложение парсер для максимальное оптимизации поисковых запросов",
+            "is_deleted": false,
+            "completion_date": null,
+            "deleted_at": null,
+            "created_at": "2023-03-06T16:35:05.440Z",
+            "updated_at": "2023-03-06T16:35:05.440Z",
+            "status": [
+                1
+            ],
+            "task_types": [
+                3
             ]
         }
     },
