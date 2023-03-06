@@ -54,7 +54,7 @@ _____________________________________/2.6 task/___________________
 from webapp.models import *
 from django.db.models import F
 
-Task.objects.filter(title=F('description'))
+tasks = Task.objects.filter(title=F('description'))
 
 __________________________________________________________________
 
