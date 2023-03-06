@@ -1,0 +1,38 @@
+{% csrf_token %}
+<div class="mb-3 row">
+    <label for="title" class="col-sm-2 col-form-label">Заголовок</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" id="title" name="title" value="{{ task.title }}">
+    </div>
+</div>
+<div class="mb-3 row">
+    <label for="description" class="col-sm-2 col-form-label">Описание</label>
+    <div class="col-sm-10">
+        <textarea class="form-control" name="description" id="description" cols="30"
+            rows="10">{{ task.description }}</textarea>
+    </div>
+</div>
+<div class="mb-3 row">
+    <label for="status" class="col-sm-2 col-form-label">Статус</label>
+    <div class="col-sm-10">
+        <select id="status" name="status" class="form-select">
+            {% for choice in choices %}
+            {% if task.status == choice.0 %}
+            <option value="{{ choice.0 }}" selected>{{ choice.1 }}</option>
+            {% else %}
+            <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+            {% endif %}
+            {% endfor %}
+        </select>
+    </div>
+</div>
+<div class="mb-3 row">
+    <label for="completion_date" class="col-sm-2 col-form-label">Выполнить до</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" id="completion_date" name="completion_date" , placeholder="YYYY-mm-dd" ,
+            value='{{ task.completion_date|date:"Y-m-d" }}''>
+    </div>
+</div>
+<div class="d-grid gap-2 col-8 mx-auto">
+    <button type="submit" class="btn btn-outline-primary mb-3">{{ button_text }}</button>
+</div>

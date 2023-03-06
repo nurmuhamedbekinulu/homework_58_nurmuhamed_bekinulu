@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Task{% endblock %}
+{% block menu %}
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'task_update' task.pk %}">Редактировать Задачу</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'task_delete' task.pk %}">Удалить Задачу</a>
+</li>
+{% endblock %}
+{% block content%}
+<div class="container">
+    <div class="card mt-5">
+        <div class="card-body">
+            <h5 class="card-title">Заголовок: {{ task.title }}</h5>
+            <p>Описание: {{ task.description|linebreaks }}</p>
+            <h6 class="card-subtitle mb-2 text-muted">
+                Статус -
+                {% for item in task.status.all %}
+                {{ item }}
+                {% if not forloop.last %},
+                {% endif %}{% endfor %}
+            </h6>
+            <h6 class="card-subtitle mb-2 text-muted">
+                Тип задачи -
+                {% for type in task.task_types.all %}
+                {{ type }}
+                {% if not forloop.last %},
+                {% endif %}{% endfor %}
+            </h6>
+            <p>Выполнить до: {{ task.completion_date }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

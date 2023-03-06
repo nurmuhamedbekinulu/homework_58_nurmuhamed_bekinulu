@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block menu%}
+{% endblock %}
+{% block content%}
+<h1>Список задач</h1>
+{% for task in tasks %}
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ task.title }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Статус -
+      {% for item in task.status.all %}
+      {{ item }}
+      {% if not forloop.last %},
+      {% endif %}{% endfor %}
+    </h6>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Тип задачи -
+      {% for type in task.task_types.all %}
+      {{ type }}
+      {% if not forloop.last %},
+      {% endif %}{% endfor %}
+    </h6>
+    <p class="card-text">{{ task.description }}</p>
+    <p class="card-text">
+      {% if task.completion_date %}
+      {{ task.completion_date }}
+      {% endif %}
+    </p>
+    <a href="{% url 'task_detail' task.pk %}" class="card-link">Подробнее...</a>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
